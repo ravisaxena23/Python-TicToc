@@ -57,8 +57,8 @@ def space_check(board, position):
 
 
 def full_board_check(board):
-    for tile in board:
-        if tile == ' ':
+    for i in range(1,10):
+        if space_check(board, i):
             return False
     return True
 
@@ -73,7 +73,6 @@ def player_choice(board):
 
 def replay():
     return raw_input('Do you want to play again? Enter Yes or No: ').lower().startswith('y')
-
 
 if __name__ == '__main__':
     print('Welcome to Tic Tac Toe!')
